@@ -35,6 +35,21 @@ SKELETON_PAIRS = [
     (13, 17), (0, 17), (17, 18), (18, 19), (19, 20)  # Pinky and Palm
 ]
 
+# List of 21 landmark index pairs defining the hand skeleton connectivity graph
+
+
+#          8     12    16    20
+#          |      |     |     |
+#   4      7     11    15    19
+#    \     |      |     |     |
+#     3    6     10    14    18
+#      \   |      |     |     |
+#       2  5------9----13----17
+#        \ |
+#         1
+#          \
+#           0 (Wrist)
+
 def calculate_raised_digits(detected_hands_data):
     active_count = 0
     distal_joints = [8, 12, 16, 20]
